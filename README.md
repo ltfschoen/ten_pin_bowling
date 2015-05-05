@@ -1,4 +1,3 @@
-== README
 
 Vodafone Ruby Tech Test
 =======================
