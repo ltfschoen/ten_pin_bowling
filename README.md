@@ -15,6 +15,4 @@ Example inputs and outputs
 "1 1 1 1 10 1 1" -> 18
 "10 10 10 10 10 10 10 10 10 10 10 10" -> 300
 
-Please include instruction on how to run the application.
-
-You should only spend 2 hours on the test.
+Please include instruction on how to run the application.  You should spend no more than 2 hours on the test.
