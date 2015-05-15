@@ -10,9 +10,9 @@ If a final score cannot be determined from the input then method should return t
 "current" score (i.e. assumes any remaining bowls score 0).
 
 Example inputs and outputs
-"1 2 3 4" -> 10
-"9 1 9 1" -> 29
-"1 1 1 1 10 1 1" -> 18
-"10 10 10 10 10 10 10 10 10 10 10 10" -> 300
+<p>"1 2 3 4" -> 10</p>
+<p>"9 1 9 1" -> 29</p>
+<p>"1 1 1 1 10 1 1" -> 18</p>
+<p>"10 10 10 10 10 10 10 10 10 10 10 10" -> 300</p>
 
 Please include instruction on how to run the application.  You should spend no more than 2 hours on the test.
