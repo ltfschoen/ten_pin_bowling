@@ -12,3 +12,10 @@ If a final score cannot be determined from the input then method should return t
 "current" score (i.e. assumes any remaining bowls score 0).
 
 Please include instruction on how to run the application.
+
+Instruction from Katherina Fatiguso:
+After running rails s, please open in the browser to view the score :
+http://0.0.0.0:3000/bowlings
+
+To edit the string of the bowling rolls, please open and edit:
+app/views/bowlings/index.html.erb

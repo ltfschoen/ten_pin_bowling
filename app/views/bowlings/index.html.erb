@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ten Pin Bowling Score</h1>
+
+  <% rolls = '6 2 7 1 10 9 0 8 2 10' %>
+  <% @array = [] %>
+  <% 0.upto(rolls.length - 1) do |num| %>
+    <% if rolls.at(num) != ' ' %>
+      <% first = rolls.at(num) %>
+      <% if rolls.at(num + 1) != ' ' %>
+        <% second = rolls.at(num + 1) %>
+        <% combined = (first.to_s) + (second.to_s) %>
+        <% if combined != '' %> <%# filter out empty character %>
+          <% @array << combined.to_i %>
+        <% end %>
+        <% rolls.slice!(num + 1) %><%# delete the 2nd digit if it is 10 %>
+      <% else %>
+        <% @array << first.to_i %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <% @score = 0 %>
+  <% 0.upto(@array.length - 1) do |num| %>
+    <% if @array[num] != 10 %>
+      <% if (@array[num].to_i + @array[num + 1].to_i) != 10 %><%# if normal scoring, not Strike, not Spare %>
+        <% @score += (@array[num].to_i + @array[num + 1].to_i) %>
+        <% @array.delete_at(num + 1) %><%# delete the second roll of the normal scoring %>
+      <% elsif (@array[num].to_i + @array[num + 1].to_i) == 10 %><%# if hits the Spare %>
+        <% @score += 10 %>
+        <% @array.delete_at(num + 1) %><%# delete the second roll of score 10 %>
+        <% if @array[num + 1].present? %><%# if we know the next one roll %>
+          <% @score += @array[num + 1].to_i %>
+        <% end %>
+      <% end %>
+    <% elsif @array[num] == 10 %>
+      <% if (@array[num + 1].present?) && (@array[num + 2].present?) %>
+        <% @score += 10 + @array[num + 1].to_i + @array[num + 2].to_i %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  '<%= rolls %>' -> <%= @score %>
+</p>

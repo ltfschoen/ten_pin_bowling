@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @bowling.score %>
+</p>
+
+<p>
+  <strong>First roll:</strong>
+  <%= @bowling.first_roll %>
+</p>
+
+<p>
+  <strong>Second roll:</strong>
+  <%= @bowling.second_roll %>
+</p>
+
+<%= link_to 'Edit', edit_bowling_path(@bowling) %> |
+<%= link_to 'Back', bowlings_path %>
