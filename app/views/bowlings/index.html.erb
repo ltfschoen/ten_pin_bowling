@@ -2,7 +2,8 @@
 
 <h1>Ten Pin Bowling Score</h1>
 
-  <% rolls = '6 2 7 1 10 9 0 8 2 10' %>
+  <% rolls = '10 10 10 10 10 10 10 10 10 10 10 10' %>
+  '<%= rolls %>'
   <% @array = [] %>
   <% 0.upto(rolls.length - 1) do |num| %>
     <% if rolls.at(num) != ' ' %>
@@ -40,5 +41,5 @@
     <% end %>
   <% end %>
 
-  '<%= rolls %>' -> <%= @score %>
+   -> <%= @score %>
 </p>
