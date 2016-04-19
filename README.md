@@ -17,3 +17,15 @@ Example inputs and outputs
 * "10 10 10 10 10 10 10 10 10 10 10 10" -> 300
 
 Please include instruction on how to run the application.  You should spend no more than 2 hours on the test.
+
+RSpec Acceptance Testing
+========
+
+1) Run Rails server in a terminal.
+```
+rails s
+```
+2) In another terminal run the tests
+```
+rspec
+```

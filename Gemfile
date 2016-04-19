@@ -41,5 +41,13 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # RSpec and Acceptance testing
+  gem "capybara"
+  gem 'database_cleaner' # used to clean database after each test
+  gem "selenium-webdriver" # web driver that enables browser-based acceptance testing
+  gem "factory_girl_rails" # allows you to prepare scripts to generate fake objects for testing
+  gem "rspec-rails" # RSpec testing framework (alternative to using Unit Test)
+  gem "chromedriver-helper" # Runs RSpec Acceptance tests in Chrome browser using Selenium
 end
 
